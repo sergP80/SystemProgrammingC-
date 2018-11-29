@@ -66,5 +66,11 @@ namespace SimpleGUICalc
             TextBox t = (TextBox)sender;
             
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            SplashForm splash = new SplashForm();
+            splash.Show(this);
+        }
     }
 }
