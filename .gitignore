@@ -1,0 +1,13 @@
+*.dll
+*.obj
+*.exe
+Debug
+.vs
+bin
+obj
+Vector2DLib/bin
+Vector2DLib/obj
+
+SimpleGUICalc/bin
+SimpleGUICalc/obj
+packages
