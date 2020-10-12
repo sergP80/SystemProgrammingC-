@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{9B0C326A-D70B-472B-8585-F48FDBACE767}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vector2DLib", "Vector2DLib\Vector2DLib.csproj", "{F251546F-7F06-4707-ABEB-ECFBD8DB652B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleGUICalc", "SimpleGUICalc\SimpleGUICalc.csproj", "{2100E032-6777-48F7-907C-B06FFE5E67F8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsCirlce", "WindowsFormsCirlce\WindowsFormsCirlce.csproj", "{607441BF-FB28-4178-89A4-B0A5A779CF27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleConsoleApp", "SimpleConsoleApp\SimpleConsoleApp.csproj", "{9B0C326A-D70B-472B-8585-F48FDBACE767}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericIntegral", "NumericIntegral\NumericIntegral.csproj", "{48D9323A-75D1-4117-A537-8844F1B59D7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericIntegralApp", "NumericIntegralApp\NumericIntegralApp.csproj", "{737AB2CE-44D0-4192-8D7F-A0EB3521FF1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericIntegralUnitTest", "NumericIntegralUnitTest\NumericIntegralUnitTest.csproj", "{7323E20C-D407-419E-A628-0BC7BCCDE84C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9B0C326A-D70B-472B-8585-F48FDBACE767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9B0C326A-D70B-472B-8585-F48FDBACE767}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9B0C326A-D70B-472B-8585-F48FDBACE767}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9B0C326A-D70B-472B-8585-F48FDBACE767}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F251546F-7F06-4707-ABEB-ECFBD8DB652B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F251546F-7F06-4707-ABEB-ECFBD8DB652B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F251546F-7F06-4707-ABEB-ECFBD8DB652B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +35,22 @@ Global
 		{607441BF-FB28-4178-89A4-B0A5A779CF27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{607441BF-FB28-4178-89A4-B0A5A779CF27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{607441BF-FB28-4178-89A4-B0A5A779CF27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B0C326A-D70B-472B-8585-F48FDBACE767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B0C326A-D70B-472B-8585-F48FDBACE767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B0C326A-D70B-472B-8585-F48FDBACE767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B0C326A-D70B-472B-8585-F48FDBACE767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48D9323A-75D1-4117-A537-8844F1B59D7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48D9323A-75D1-4117-A537-8844F1B59D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48D9323A-75D1-4117-A537-8844F1B59D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48D9323A-75D1-4117-A537-8844F1B59D7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{737AB2CE-44D0-4192-8D7F-A0EB3521FF1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{737AB2CE-44D0-4192-8D7F-A0EB3521FF1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{737AB2CE-44D0-4192-8D7F-A0EB3521FF1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{737AB2CE-44D0-4192-8D7F-A0EB3521FF1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7323E20C-D407-419E-A628-0BC7BCCDE84C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7323E20C-D407-419E-A628-0BC7BCCDE84C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7323E20C-D407-419E-A628-0BC7BCCDE84C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7323E20C-D407-419E-A628-0BC7BCCDE84C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
