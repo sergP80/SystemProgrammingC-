@@ -1,0 +1,100 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ArrayUtils/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/ArrayUtils.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ArrayUtils.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ArrayUtils/1.0.0": {
+      "type": "project",
+      "path": "../ArrayUtils/ArrayUtils.csproj",
+      "msbuildProject": "../ArrayUtils/ArrayUtils.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "ArrayUtils >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/sergiip/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/sergiip/Project/univer/SystemProgrammingC-/ArraysApp/ArraysApp.csproj",
+      "projectName": "ArraysApp",
+      "projectPath": "/home/sergiip/Project/univer/SystemProgrammingC-/ArraysApp/ArraysApp.csproj",
+      "packagesPath": "/home/sergiip/.nuget/packages/",
+      "outputPath": "/home/sergiip/Project/univer/SystemProgrammingC-/ArraysApp/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/sergiip/.config/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "/home/sergiip/Project/univer/SystemProgrammingC-/ArrayUtils/ArrayUtils.csproj": {
+              "projectPath": "/home/sergiip/Project/univer/SystemProgrammingC-/ArrayUtils/ArrayUtils.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[3.1.0, 3.1.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/lib/mono/msbuild/Current/bin/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

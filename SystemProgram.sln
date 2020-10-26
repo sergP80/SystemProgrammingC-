@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericIntegralApp", "Numer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericIntegralUnitTest", "NumericIntegralUnitTest\NumericIntegralUnitTest.csproj", "{7323E20C-D407-419E-A628-0BC7BCCDE84C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayUtils", "ArrayUtils\ArrayUtils.csproj", "{AD9AB0A8-9540-49BB-BEEB-5444BA50F620}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraysApp", "ArraysApp\ArraysApp.csproj", "{FBE85BAA-8688-4709-AA68-E6C04C46CFB5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{7323E20C-D407-419E-A628-0BC7BCCDE84C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7323E20C-D407-419E-A628-0BC7BCCDE84C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7323E20C-D407-419E-A628-0BC7BCCDE84C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD9AB0A8-9540-49BB-BEEB-5444BA50F620}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD9AB0A8-9540-49BB-BEEB-5444BA50F620}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD9AB0A8-9540-49BB-BEEB-5444BA50F620}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD9AB0A8-9540-49BB-BEEB-5444BA50F620}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBE85BAA-8688-4709-AA68-E6C04C46CFB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBE85BAA-8688-4709-AA68-E6C04C46CFB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBE85BAA-8688-4709-AA68-E6C04C46CFB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBE85BAA-8688-4709-AA68-E6C04C46CFB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
