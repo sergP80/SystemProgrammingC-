@@ -1,25 +1,89 @@
 {
   "format": 1,
   "restore": {
-    "/home/sergiip/Project/univer/SystemProgrammingC-/ArraysApp/ArraysApp.csproj": {}
+    "C:\\Users\\Admin\\Source\\Repos\\SystemProgrammingC-\\ArraysApp\\ArraysApp.csproj": {}
   },
   "projects": {
-    "/home/sergiip/Project/univer/SystemProgrammingC-/ArrayUtils/ArrayUtils.csproj": {
+    "C:\\Users\\Admin\\Source\\Repos\\SystemProgrammingC-\\ArraysApp\\ArraysApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/sergiip/Project/univer/SystemProgrammingC-/ArrayUtils/ArrayUtils.csproj",
-        "projectName": "ArrayUtils",
-        "projectPath": "/home/sergiip/Project/univer/SystemProgrammingC-/ArrayUtils/ArrayUtils.csproj",
-        "packagesPath": "/home/sergiip/.nuget/packages/",
-        "outputPath": "/home/sergiip/Project/univer/SystemProgrammingC-/ArrayUtils/obj/",
+        "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\SystemProgrammingC-\\ArraysApp\\ArraysApp.csproj",
+        "projectName": "ArraysApp",
+        "projectPath": "C:\\Users\\Admin\\Source\\Repos\\SystemProgrammingC-\\ArraysApp\\ArraysApp.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Source\\Repos\\SystemProgrammingC-\\ArraysApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/home/sergiip/.config/NuGet/NuGet.Config"
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Admin\\Source\\Repos\\SystemProgrammingC-\\ArrayUtils\\ArrayUtils.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Source\\Repos\\SystemProgrammingC-\\ArrayUtils\\ArrayUtils.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Admin\\Source\\Repos\\SystemProgrammingC-\\ArrayUtils\\ArrayUtils.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\SystemProgrammingC-\\ArrayUtils\\ArrayUtils.csproj",
+        "projectName": "ArrayUtils",
+        "projectPath": "C:\\Users\\Admin\\Source\\Repos\\SystemProgrammingC-\\ArrayUtils\\ArrayUtils.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Source\\Repos\\SystemProgrammingC-\\ArrayUtils\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,90 +109,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/mono/msbuild/Current/bin/RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "/home/sergiip/Project/univer/SystemProgrammingC-/ArraysApp/ArraysApp.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/home/sergiip/Project/univer/SystemProgrammingC-/ArraysApp/ArraysApp.csproj",
-        "projectName": "ArraysApp",
-        "projectPath": "/home/sergiip/Project/univer/SystemProgrammingC-/ArraysApp/ArraysApp.csproj",
-        "packagesPath": "/home/sergiip/.nuget/packages/",
-        "outputPath": "/home/sergiip/Project/univer/SystemProgrammingC-/ArraysApp/obj/",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/home/sergiip/.config/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
-            "projectReferences": {
-              "/home/sergiip/Project/univer/SystemProgrammingC-/ArrayUtils/ArrayUtils.csproj": {
-                "projectPath": "/home/sergiip/Project/univer/SystemProgrammingC-/ArrayUtils/ArrayUtils.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/lib/mono/msbuild/Current/bin/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

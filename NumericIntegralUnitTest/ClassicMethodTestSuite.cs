@@ -11,6 +11,7 @@ namespace NumericIntegralUnitTest
         {
             return x * Math.Sin(2 * x - 1);
         }
+
         [TestMethod]
         [DataRow(1.0, 2.0, 50, 1.0851, 0.01)]
         [DataRow(1.0, 2.0, 300, 1.0851, 0.001)]
@@ -18,6 +19,16 @@ namespace NumericIntegralUnitTest
         {
             double actualResult = Integrals.LeftRect(a, b, n, TestFunc);
             Assert.IsTrue(Math.Abs(expectedResult - actualResult) <= eps);
+        }
+
+
+        [TestMethod]
+        [DataRow(1.0, 2.0, 50, 1.0851, 5)]
+        [DataRow(1.0, 2.0, 300, 1.0851, 1)]
+        public void ShouldSuccessCalculateIntegralViaLeftRectMethodRelative(double a, double b, int n, double expectedResult, int eps)
+        {
+            double actualResult = Integrals.LeftRect(a, b, n, TestFunc);
+            Assert.IsTrue(Math.Abs(expectedResult - actualResult)/Math.Abs(expectedResult)*100 <= eps);
         }
 
         [TestMethod]

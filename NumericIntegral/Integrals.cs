@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace NumericIntegral
 {
-    
     public delegate double IntegralMethod(double a, double b, int n, Func<double, double> func);
-    
     public static class Integrals
     {
         public static double LeftRect(double a, double b, int n, Func<double, double> func)
