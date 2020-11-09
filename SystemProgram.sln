@@ -23,9 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArraysApp", "ArraysApp\Arra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayUtilsTests", "ArrayUtilsTests\ArrayUtilsTests.csproj", "{AB35E3A3-8E16-45D5-96CD-85C071A538F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilityClassLib", "UtilityClassLib\UtilityClassLib.csproj", "{B809E3FA-D8D1-4B9F-AA97-8E8B77A5EF83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtilityClassLib", "UtilityClassLib\UtilityClassLib.csproj", "{B809E3FA-D8D1-4B9F-AA97-8E8B77A5EF83}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarModelingApp", "CarModelingApp\CarModelingApp.csproj", "{D7C8A866-6963-4637-B5D1-4E5C8C127801}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiFunctionCalculator", "GuiFunctionCalculator\GuiFunctionCalculator.csproj", "{11176E1B-930C-4529-9C82-CFF758CF927E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTextEditor", "SimpleTextEditor\SimpleTextEditor.csproj", "{2FF67339-6CF7-4613-BBD6-2ED284BBAA93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +85,14 @@ Global
 		{D7C8A866-6963-4637-B5D1-4E5C8C127801}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7C8A866-6963-4637-B5D1-4E5C8C127801}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7C8A866-6963-4637-B5D1-4E5C8C127801}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11176E1B-930C-4529-9C82-CFF758CF927E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11176E1B-930C-4529-9C82-CFF758CF927E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11176E1B-930C-4529-9C82-CFF758CF927E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11176E1B-930C-4529-9C82-CFF758CF927E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FF67339-6CF7-4613-BBD6-2ED284BBAA93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FF67339-6CF7-4613-BBD6-2ED284BBAA93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FF67339-6CF7-4613-BBD6-2ED284BBAA93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FF67339-6CF7-4613-BBD6-2ED284BBAA93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
