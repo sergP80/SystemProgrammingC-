@@ -67,9 +67,9 @@ namespace UtilityClassLib
             Height = 1.7,
             Lenght = 4.0
         };
-        public double Velocity;
-        public double MaxVelocity = 180;
-        public double TankVolume = 40;
+        public double Velocity { get; set; } = 0;
+        public double MaxVelocity { get; set; } = 180;
+        public double TankVolume { get; set; } = 40;
 
         public MechanicVenichle()
         {
@@ -94,7 +94,7 @@ namespace UtilityClassLib
     public class PassengerVenichle: MechanicVenichle
     {
         public int PassengerCount = 5;
-        public int DorCount = 5;
+        public int DoorCount = 5;
         public bool HasLoadTank = false;
 
         public PassengerVenichle(): base()
@@ -113,7 +113,7 @@ namespace UtilityClassLib
 
         public override string ToString()
         {
-            return string.Format("PassengerCar[{0}, PassengerCount: {1}, DorCount: {2}, HasLoadTank: {3}]", base.ToString(), PassengerCount, DorCount, HasLoadTank);
+            return string.Format("PassengerCar[{0}, PassengerCount: {1}, DorCount: {2}, HasLoadTank: {3}]", base.ToString(), PassengerCount, DoorCount, HasLoadTank);
         }
     }
 }

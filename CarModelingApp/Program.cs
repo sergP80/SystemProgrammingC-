@@ -17,6 +17,8 @@ namespace CarModelingApp
             };
 
             Console.WriteLine(venichle1);
+
+            venichle1.HasLoadTank = bool.Parse(Console.ReadLine());
         }
     }
 }
