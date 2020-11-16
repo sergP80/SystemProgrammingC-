@@ -7,41 +7,101 @@ using System.Threading.Tasks;
 
 namespace NumericIntegral
 {
-    public delegate double IntegralMethod(double a, double b, int n, Func<double, double> func);
+    public class IntegrateOptions
+    {
+        public double StartX { get; set; }
+        public double EndX { get; set; }
+        public int Steps { get; set; }
+
+        private double tolerance = 1e-3;
+        public double Tolerance
+        {
+            get
+            {
+                return tolerance;
+            }
+
+            set
+            {
+                if (value < 0 || value > 1)
+                {
+                    throw new InvalidOperationException("Tolerance should be between 0 and 1");
+                }
+            }
+        }
+        public Func<double, double> Function { get; set; }
+
+        public double Step
+        {
+            get
+            {
+                return (EndX - StartX) / Steps;
+            }
+        }
+
+        public double CountedSteps { get; internal set; } = 0;
+
+    }
+
+    public delegate double IntegralMethod(IntegrateOptions options, Func<double, int, bool> cancelProgress);
     public static class Integrals
     {
-        public static double LeftRect(double a, double b, int n, Func<double, double> func)
+        private static bool isTolerance(double x, double y, double eps)
         {
-            double result = 0, h = (b - a) / n;
+            return Math.Abs(x - y) <= eps;
+        }
+        public static double LeftRect(IntegrateOptions options, Func<double, int, bool> cancelProgress = null)
+        {
+            double result = 0;
 
-            for (int i = 0; i < n; ++i)
+            bool cancel = false;
+            for (int i = 0; i < options.Steps && !cancel; ++i)
             {
-                result += func(a + i * h);
-                Thread.Sleep(100);
+                result += options.Function(options.StartX + i * options.Step);
+                if (cancelProgress != null)
+                {
+                    cancel = cancelProgress(result * options.Step, (i + 1)*100/ options.Steps);
+                }
+                Thread.Sleep(10);
+                options.CountedSteps = i + 1;
             }
-            return result * h;
+            return result* options.Step;
         }
 
-        public static double RightRect(double a, double b, int n, Func<double, double> func)
+        public static double RightRect(IntegrateOptions options, Func<double, int, bool> cancelProgress = null)
         {
-            double result = 0, h = (b - a) / n;
+            double result = 0;
 
-            for (int i = 1; i <= n; ++i)
+            bool cancel = false;
+            for (int i = 1; i <= options.Steps && !cancel; ++i)
             {
-                result += func(a + i * h);
+                result += options.Function(options.StartX + i * options.Step);
+                if (cancelProgress != null)
+                {
+                    cancel = cancelProgress(result * options.Step, i* 100 / options.Steps);
+                }
+                Thread.Sleep(10);
+                options.CountedSteps = i;
             }
-            return result * h;
+            return result * options.Step;
         }
 
-        public static double MidRect(double a, double b, int n, Func<double, double> func)
+        public static double MidRect(IntegrateOptions options, Func<double, int, bool> cancelProgress = null)
         {
-            double result = 0, h = (b - a) / n;
+            double result = 0;
 
-            for (int i = 0; i < n; ++i)
+            bool cancel = false;
+            for (int i = 0; i < options.Steps && !cancel; ++i)
             {
-                result += func(a + (i + 0.5) * h);
+                result += options.Function(options.StartX + (i+0.5) * options.Step);
+                if (cancelProgress != null)
+                {
+                    cancel = cancelProgress(result * options.Step, (i + 1) * 100 / options.Steps);
+                }
+                Thread.Sleep(10);
+                options.CountedSteps = i + 1;
             }
-            return result * h;
+            return result * options.Step;
         }
     }
 }
