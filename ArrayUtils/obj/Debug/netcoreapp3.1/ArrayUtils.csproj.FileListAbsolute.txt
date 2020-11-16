@@ -25,3 +25,12 @@ C:\Users\Admin\Source\Repos\SystemProgrammingC-\ArrayUtils\obj\Debug\netcoreapp3
 C:\Users\Admin\Source\Repos\SystemProgrammingC-\ArrayUtils\obj\Debug\netcoreapp3.1\ArrayUtils.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Source\Repos\SystemProgrammingC-\ArrayUtils\obj\Debug\netcoreapp3.1\ArrayUtils.dll
 C:\Users\Admin\Source\Repos\SystemProgrammingC-\ArrayUtils\obj\Debug\netcoreapp3.1\ArrayUtils.pdb
+C:\Users\svpuzyrov\Source\Repos\SystemProgrammingC-\ArrayUtils\bin\Debug\netcoreapp3.1\ArrayUtils.deps.json
+C:\Users\svpuzyrov\Source\Repos\SystemProgrammingC-\ArrayUtils\bin\Debug\netcoreapp3.1\ArrayUtils.dll
+C:\Users\svpuzyrov\Source\Repos\SystemProgrammingC-\ArrayUtils\bin\Debug\netcoreapp3.1\ArrayUtils.pdb
+C:\Users\svpuzyrov\Source\Repos\SystemProgrammingC-\ArrayUtils\obj\Debug\netcoreapp3.1\ArrayUtils.csprojAssemblyReference.cache
+C:\Users\svpuzyrov\Source\Repos\SystemProgrammingC-\ArrayUtils\obj\Debug\netcoreapp3.1\ArrayUtils.AssemblyInfoInputs.cache
+C:\Users\svpuzyrov\Source\Repos\SystemProgrammingC-\ArrayUtils\obj\Debug\netcoreapp3.1\ArrayUtils.AssemblyInfo.cs
+C:\Users\svpuzyrov\Source\Repos\SystemProgrammingC-\ArrayUtils\obj\Debug\netcoreapp3.1\ArrayUtils.csproj.CoreCompileInputs.cache
+C:\Users\svpuzyrov\Source\Repos\SystemProgrammingC-\ArrayUtils\obj\Debug\netcoreapp3.1\ArrayUtils.dll
+C:\Users\svpuzyrov\Source\Repos\SystemProgrammingC-\ArrayUtils\obj\Debug\netcoreapp3.1\ArrayUtils.pdb
