@@ -77,32 +77,32 @@ namespace GuiIntegrals
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            this.txbValue.InvokeAsync(()=> txbValue.Text = (string)e.UserState);
-            this.progressBar1.InvokeAsync(()=> this.progressBar1.Value = e.ProgressPercentage);
+            this.txbValue.InvokeAsyncAction(()=> txbValue.Text = (string)e.UserState);
+            this.progressBar1.InvokeAsyncAction(()=> progressBar1.Value = e.ProgressPercentage);
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             if (e.Error != null)
             {
-                MessageBox.Show(string.Format("{0}", e.Error.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, string.Format("{0}", e.Error.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } 
             else
             {
                 if (e.Cancelled)
                 {
                     string message = string.Format("Operation canceled with {0} steps", options.CountedSteps);
-                    MessageBox.Show(message, "Status", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(this, message, "Status", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
                     var result = string.Format(formatter((double)e.Result));
-                    MessageBox.Show(string.Format("Result: {0} with count steps: {1}", result, options.CountedSteps), "Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(this, string.Format("Result: {0} with count steps: {1}", result, options.CountedSteps), "Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.txbValue.Text = result;
                 }
             }
             
-            this.InvokeAsync(() => enableStartItems(true));
+            this.InvokeAsyncAction(() => enableStartItems(true));
         }
 
         private void enableStartItems(bool enable)
@@ -120,7 +120,7 @@ namespace GuiIntegrals
         {
         }
 
-        private void rbLeftRecMethod_CheckedChanged(object sender, EventArgs e)
+        private void rbLeftRecMethod_Click(object sender, EventArgs e)
         {
             if (sender is RadioButton)
             {

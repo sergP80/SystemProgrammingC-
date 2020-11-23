@@ -50,6 +50,7 @@ namespace NumericIntegral
         {
             return Math.Abs(x - y) <= eps;
         }
+
         public static double LeftRect(IntegrateOptions options, Func<double, int, bool> cancelProgress = null)
         {
             double result = 0;
@@ -65,7 +66,7 @@ namespace NumericIntegral
                 Thread.Sleep(10);
                 options.CountedSteps = i + 1;
             }
-            return result* options.Step;
+            return result * options.Step;
         }
 
         public static double RightRect(IntegrateOptions options, Func<double, int, bool> cancelProgress = null)

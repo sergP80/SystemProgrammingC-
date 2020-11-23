@@ -17,7 +17,14 @@ namespace NumericIntegralUnitTest
         [DataRow(1.0, 2.0, 300, 1.0851, 0.001)]
         public void ShouldSuccessCalculateIntegralViaLeftRectMethod(double a, double b, int n, double expectedResult, double eps)
         {
-            double actualResult = Integrals.LeftRect(a, b, n, TestFunc);
+            IntegrateOptions options = new IntegrateOptions()
+            {
+                StartX = a,
+                EndX = b,
+                Steps = n,
+                Function = TestFunc
+            };
+            double actualResult = Integrals.LeftRect(options);
             Assert.IsTrue(Math.Abs(expectedResult - actualResult) <= eps);
         }
 
@@ -27,7 +34,14 @@ namespace NumericIntegralUnitTest
         [DataRow(1.0, 2.0, 300, 1.0851, 1)]
         public void ShouldSuccessCalculateIntegralViaLeftRectMethodRelative(double a, double b, int n, double expectedResult, int eps)
         {
-            double actualResult = Integrals.LeftRect(a, b, n, TestFunc);
+            IntegrateOptions options = new IntegrateOptions()
+            {
+                StartX = a,
+                EndX = b,
+                Steps = n,
+                Function = TestFunc
+            };
+            double actualResult = Integrals.LeftRect(options);
             Assert.IsTrue(Math.Abs(expectedResult - actualResult)/Math.Abs(expectedResult)*100 <= eps);
         }
 
@@ -36,7 +50,14 @@ namespace NumericIntegralUnitTest
         [DataRow(1.0, 2.0, 300, 1.0851, 0.001)]
         public void ShouldSuccessCalculateIntegralViaRightRectMethod(double a, double b, int n, double expectedResult, double eps)
         {
-            double actualResult = Integrals.RightRect(a, b, n, TestFunc);
+            IntegrateOptions options = new IntegrateOptions()
+            {
+                StartX = a,
+                EndX = b,
+                Steps = n,
+                Function = TestFunc
+            };
+            double actualResult = Integrals.RightRect(options);
             Assert.IsTrue(Math.Abs(expectedResult - actualResult) <= eps);
         }
 
@@ -45,7 +66,14 @@ namespace NumericIntegralUnitTest
         [DataRow(1.0, 2.0, 50, 1.0851, 0.001)]
         public void ShouldSuccessCalculateIntegralViaMidRectMethod(double a, double b, int n, double expectedResult, double eps)
         {
-            double actualResult = Integrals.MidRect(a, b, n, TestFunc);
+            IntegrateOptions options = new IntegrateOptions()
+            {
+                StartX = a,
+                EndX = b,
+                Steps = n,
+                Function = TestFunc
+            };
+            double actualResult = Integrals.MidRect(options);
             Assert.IsTrue(Math.Abs(expectedResult - actualResult) <= eps);
         }
     }

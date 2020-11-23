@@ -288,7 +288,7 @@
             this.rbLeftRecMethod.Tag = "0";
             this.rbLeftRecMethod.Text = "Left rect";
             this.rbLeftRecMethod.UseVisualStyleBackColor = true;
-            this.rbLeftRecMethod.CheckedChanged += new System.EventHandler(this.rbLeftRecMethod_CheckedChanged);
+            this.rbLeftRecMethod.Click += new System.EventHandler(this.rbLeftRecMethod_Click);
             // 
             // mainForm
             // 

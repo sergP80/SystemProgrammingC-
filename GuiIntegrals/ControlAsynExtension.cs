@@ -9,7 +9,7 @@ namespace GuiIntegrals
 {
     public static class ControlAsynExtension
     {
-        public static void InvokeAsync(this Control control, Action action)
+        public static void InvokeAsyncAction(this Control control, Action action)
         {
             if (control.InvokeRequired)
             {
