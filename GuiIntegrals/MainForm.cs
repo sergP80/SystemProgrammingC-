@@ -17,6 +17,7 @@ namespace GuiIntegrals
         private IntegrateOptions options = new IntegrateOptions();
         private Func<double, string> formatter = d => string.Format("{0:###0.#####}", d);
         private int selectedMethod = 0;
+        private string expression = "";
 
         public mainForm()
         {
@@ -49,11 +50,12 @@ namespace GuiIntegrals
         {
             try
             {
+                this.expression = txbExpression.Text;
                 options.StartX = double.Parse(txbLeftX.Text);
                 options.EndX = double.Parse(txbRightX.Text);
                 options.Steps = int.Parse(txbSteps.Text);
                 options.Tolerance = double.Parse(mtxbTolerance.Text);
-                options.Function = Functions.ComputedFunction;
+                options.Function = x => Functions.EvaluteFunction(expression, x);
                 return true;
             }
             catch (Exception)
@@ -77,8 +79,8 @@ namespace GuiIntegrals
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            this.txbValue.InvokeAsyncAction(()=> txbValue.Text = (string)e.UserState);
-            this.progressBar1.InvokeAsyncAction(()=> progressBar1.Value = e.ProgressPercentage);
+            tstxValue.Text = (string)e.UserState;
+            tsProgressBar1.Value = e.ProgressPercentage;
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -98,7 +100,7 @@ namespace GuiIntegrals
                 {
                     var result = string.Format(formatter((double)e.Result));
                     MessageBox.Show(this, string.Format("Result: {0} with count steps: {1}", result, options.CountedSteps), "Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.txbValue.Text = result;
+                    this.tstxValue.Text = result;
                 }
             }
             
@@ -113,7 +115,7 @@ namespace GuiIntegrals
 
             this.gbMethods.Enabled = enable;
             this.cancelToolStripMenuItem.Visible = !enable;
-            this.progressBar1.Visible = !enable;
+            this.tsProgressBar1.Visible = !enable;
         }
 
         private void mainForm_Load(object sender, EventArgs e)

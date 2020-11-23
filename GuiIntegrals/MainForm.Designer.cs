@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,18 +44,28 @@
             this.txbLeftX = new System.Windows.Forms.TextBox();
             this.lbRightX = new System.Windows.Forms.Label();
             this.lbLeftX = new System.Windows.Forms.Label();
-            this.gbResult = new System.Windows.Forms.GroupBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.txbValue = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.gbMethods = new System.Windows.Forms.GroupBox();
             this.rbMidleRect = new System.Windows.Forms.RadioButton();
             this.rbRightRect = new System.Windows.Forms.RadioButton();
             this.rbLeftRecMethod = new System.Windows.Forms.RadioButton();
+            this.txbExpression = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.tstxValue = new System.Windows.Forms.ToolStripTextBox();
             this.menuStrip1.SuspendLayout();
             this.gbSettings.SuspendLayout();
-            this.gbResult.SuspendLayout();
             this.gbMethods.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -66,7 +77,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(502, 38);
+            this.menuStrip1.Size = new System.Drawing.Size(502, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -78,14 +89,14 @@
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(56, 32);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 25);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // calculateToolStripMenuItem
             // 
             this.calculateToolStripMenuItem.Name = "calculateToolStripMenuItem";
             this.calculateToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(246, 32);
+            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.calculateToolStripMenuItem.Text = "&Calculate";
             this.calculateToolStripMenuItem.Click += new System.EventHandler(this.calculateToolStripMenuItem_Click);
             // 
@@ -94,7 +105,7 @@
             this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
             this.cancelToolStripMenuItem.ShortcutKeyDisplayString = "";
             this.cancelToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(246, 32);
+            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.cancelToolStripMenuItem.Text = "Cancel";
             this.cancelToolStripMenuItem.Visible = false;
             this.cancelToolStripMenuItem.Click += new System.EventHandler(this.cancelToolStripMenuItem_Click);
@@ -102,18 +113,20 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(243, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(196, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F10;
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(246, 32);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // gbSettings
             // 
+            this.gbSettings.Controls.Add(this.label1);
+            this.gbSettings.Controls.Add(this.txbExpression);
             this.gbSettings.Controls.Add(this.mtxbTolerance);
             this.gbSettings.Controls.Add(this.lbTolerance);
             this.gbSettings.Controls.Add(this.txbSteps);
@@ -123,113 +136,85 @@
             this.gbSettings.Controls.Add(this.lbRightX);
             this.gbSettings.Controls.Add(this.lbLeftX);
             this.gbSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.gbSettings.Location = new System.Drawing.Point(12, 46);
+            this.gbSettings.Location = new System.Drawing.Point(12, 66);
             this.gbSettings.Name = "gbSettings";
-            this.gbSettings.Size = new System.Drawing.Size(232, 171);
+            this.gbSettings.Size = new System.Drawing.Size(232, 219);
             this.gbSettings.TabIndex = 7;
             this.gbSettings.TabStop = false;
             this.gbSettings.Text = "Settings";
             // 
             // mtxbTolerance
             // 
-            this.mtxbTolerance.Location = new System.Drawing.Point(106, 126);
+            this.mtxbTolerance.Location = new System.Drawing.Point(108, 186);
             this.mtxbTolerance.Mask = "1e-###";
             this.mtxbTolerance.Name = "mtxbTolerance";
-            this.mtxbTolerance.Size = new System.Drawing.Size(100, 28);
+            this.mtxbTolerance.Size = new System.Drawing.Size(100, 24);
             this.mtxbTolerance.TabIndex = 14;
+            this.mtxbTolerance.Text = "3";
             // 
             // lbTolerance
             // 
             this.lbTolerance.AutoSize = true;
-            this.lbTolerance.Location = new System.Drawing.Point(7, 130);
+            this.lbTolerance.Location = new System.Drawing.Point(9, 190);
             this.lbTolerance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTolerance.Name = "lbTolerance";
-            this.lbTolerance.Size = new System.Drawing.Size(96, 24);
+            this.lbTolerance.Size = new System.Drawing.Size(74, 18);
             this.lbTolerance.TabIndex = 13;
             this.lbTolerance.Text = "Tolerance";
             // 
             // txbSteps
             // 
-            this.txbSteps.Location = new System.Drawing.Point(106, 92);
+            this.txbSteps.Location = new System.Drawing.Point(108, 152);
             this.txbSteps.Name = "txbSteps";
-            this.txbSteps.Size = new System.Drawing.Size(100, 28);
+            this.txbSteps.Size = new System.Drawing.Size(100, 24);
             this.txbSteps.TabIndex = 12;
             this.txbSteps.Text = "10";
             // 
             // lbSteps
             // 
             this.lbSteps.AutoSize = true;
-            this.lbSteps.Location = new System.Drawing.Point(7, 96);
+            this.lbSteps.Location = new System.Drawing.Point(9, 156);
             this.lbSteps.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSteps.Name = "lbSteps";
-            this.lbSteps.Size = new System.Drawing.Size(57, 24);
+            this.lbSteps.Size = new System.Drawing.Size(46, 18);
             this.lbSteps.TabIndex = 11;
             this.lbSteps.Text = "Steps";
             // 
             // txbRightX
             // 
-            this.txbRightX.Location = new System.Drawing.Point(106, 58);
+            this.txbRightX.Location = new System.Drawing.Point(108, 118);
             this.txbRightX.Name = "txbRightX";
-            this.txbRightX.Size = new System.Drawing.Size(100, 28);
+            this.txbRightX.Size = new System.Drawing.Size(100, 24);
             this.txbRightX.TabIndex = 10;
             this.txbRightX.Text = "1";
             // 
             // txbLeftX
             // 
-            this.txbLeftX.Location = new System.Drawing.Point(106, 23);
+            this.txbLeftX.Location = new System.Drawing.Point(108, 83);
             this.txbLeftX.Name = "txbLeftX";
-            this.txbLeftX.Size = new System.Drawing.Size(100, 28);
+            this.txbLeftX.Size = new System.Drawing.Size(100, 24);
             this.txbLeftX.TabIndex = 9;
             this.txbLeftX.Text = "0";
             // 
             // lbRightX
             // 
             this.lbRightX.AutoSize = true;
-            this.lbRightX.Location = new System.Drawing.Point(7, 62);
+            this.lbRightX.Location = new System.Drawing.Point(9, 122);
             this.lbRightX.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbRightX.Name = "lbRightX";
-            this.lbRightX.Size = new System.Drawing.Size(72, 24);
+            this.lbRightX.Size = new System.Drawing.Size(56, 18);
             this.lbRightX.TabIndex = 8;
             this.lbRightX.Text = "Right X";
             // 
             // lbLeftX
             // 
             this.lbLeftX.AutoSize = true;
-            this.lbLeftX.Location = new System.Drawing.Point(7, 27);
+            this.lbLeftX.Location = new System.Drawing.Point(9, 87);
             this.lbLeftX.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbLeftX.Name = "lbLeftX";
-            this.lbLeftX.Size = new System.Drawing.Size(58, 24);
+            this.lbLeftX.Size = new System.Drawing.Size(46, 18);
             this.lbLeftX.TabIndex = 7;
             this.lbLeftX.Text = "Left X";
-            // 
-            // gbResult
-            // 
-            this.gbResult.Controls.Add(this.progressBar1);
-            this.gbResult.Controls.Add(this.txbValue);
-            this.gbResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.gbResult.Location = new System.Drawing.Point(257, 46);
-            this.gbResult.Name = "gbResult";
-            this.gbResult.Size = new System.Drawing.Size(232, 150);
-            this.gbResult.TabIndex = 8;
-            this.gbResult.TabStop = false;
-            this.gbResult.Text = "Result";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(6, 75);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(214, 23);
-            this.progressBar1.Step = 1;
-            this.progressBar1.TabIndex = 10;
-            this.progressBar1.Visible = false;
-            // 
-            // txbValue
-            // 
-            this.txbValue.Location = new System.Drawing.Point(6, 29);
-            this.txbValue.Name = "txbValue";
-            this.txbValue.ReadOnly = true;
-            this.txbValue.Size = new System.Drawing.Size(214, 28);
-            this.txbValue.TabIndex = 9;
             // 
             // backgroundWorker1
             // 
@@ -245,7 +230,7 @@
             this.gbMethods.Controls.Add(this.rbRightRect);
             this.gbMethods.Controls.Add(this.rbLeftRecMethod);
             this.gbMethods.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.gbMethods.Location = new System.Drawing.Point(12, 223);
+            this.gbMethods.Location = new System.Drawing.Point(250, 66);
             this.gbMethods.Name = "gbMethods";
             this.gbMethods.Size = new System.Drawing.Size(176, 129);
             this.gbMethods.TabIndex = 9;
@@ -257,7 +242,7 @@
             this.rbMidleRect.AutoSize = true;
             this.rbMidleRect.Location = new System.Drawing.Point(12, 99);
             this.rbMidleRect.Name = "rbMidleRect";
-            this.rbMidleRect.Size = new System.Drawing.Size(104, 24);
+            this.rbMidleRect.Size = new System.Drawing.Size(87, 21);
             this.rbMidleRect.TabIndex = 2;
             this.rbMidleRect.Tag = "2";
             this.rbMidleRect.Text = "Midle rect";
@@ -269,7 +254,7 @@
             this.rbRightRect.AutoSize = true;
             this.rbRightRect.Location = new System.Drawing.Point(12, 64);
             this.rbRightRect.Name = "rbRightRect";
-            this.rbRightRect.Size = new System.Drawing.Size(103, 24);
+            this.rbRightRect.Size = new System.Drawing.Size(87, 21);
             this.rbRightRect.TabIndex = 1;
             this.rbRightRect.Tag = "1";
             this.rbRightRect.Text = "Right rect";
@@ -282,7 +267,7 @@
             this.rbLeftRecMethod.Checked = true;
             this.rbLeftRecMethod.Location = new System.Drawing.Point(12, 29);
             this.rbLeftRecMethod.Name = "rbLeftRecMethod";
-            this.rbLeftRecMethod.Size = new System.Drawing.Size(93, 24);
+            this.rbLeftRecMethod.Size = new System.Drawing.Size(78, 21);
             this.rbLeftRecMethod.TabIndex = 0;
             this.rbLeftRecMethod.TabStop = true;
             this.rbLeftRecMethod.Tag = "0";
@@ -290,13 +275,116 @@
             this.rbLeftRecMethod.UseVisualStyleBackColor = true;
             this.rbLeftRecMethod.Click += new System.EventHandler(this.rbLeftRecMethod_Click);
             // 
+            // txbExpression
+            // 
+            this.txbExpression.Location = new System.Drawing.Point(6, 41);
+            this.txbExpression.Name = "txbExpression";
+            this.txbExpression.Size = new System.Drawing.Size(220, 24);
+            this.txbExpression.TabIndex = 15;
+            this.txbExpression.Text = "pi*x*x/(x*x-3)";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 18);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Expression";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripSeparator2,
+            this.toolStripButton3,
+            this.toolStripSeparator3,
+            this.toolStripComboBox1,
+            this.toolStripSeparator4,
+            this.tsProgressBar1,
+            this.toolStripSeparator5,
+            this.tstxValue});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 31);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(502, 25);
+            this.toolStrip1.TabIndex = 10;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "toolStripButton2";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "toolStripButton3";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 25);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tsProgressBar1
+            // 
+            this.tsProgressBar1.Name = "tsProgressBar1";
+            this.tsProgressBar1.Size = new System.Drawing.Size(100, 22);
+            this.tsProgressBar1.Step = 1;
+            this.tsProgressBar1.Visible = false;
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tstxValue
+            // 
+            this.tstxValue.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tstxValue.Name = "tstxValue";
+            this.tstxValue.ReadOnly = true;
+            this.tstxValue.Size = new System.Drawing.Size(100, 25);
+            // 
             // mainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 373);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.gbMethods);
-            this.Controls.Add(this.gbResult);
             this.Controls.Add(this.gbSettings);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -309,10 +397,10 @@
             this.menuStrip1.PerformLayout();
             this.gbSettings.ResumeLayout(false);
             this.gbSettings.PerformLayout();
-            this.gbResult.ResumeLayout(false);
-            this.gbResult.PerformLayout();
             this.gbMethods.ResumeLayout(false);
             this.gbMethods.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,9 +420,6 @@
         private System.Windows.Forms.TextBox txbLeftX;
         private System.Windows.Forms.Label lbRightX;
         private System.Windows.Forms.Label lbLeftX;
-        private System.Windows.Forms.GroupBox gbResult;
-        private System.Windows.Forms.TextBox txbValue;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem;
         private System.Windows.Forms.GroupBox gbMethods;
@@ -343,6 +428,19 @@
         private System.Windows.Forms.RadioButton rbMidleRect;
         private System.Windows.Forms.Label lbTolerance;
         private System.Windows.Forms.MaskedTextBox mtxbTolerance;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txbExpression;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripProgressBar tsProgressBar1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripTextBox tstxValue;
     }
 }
 
