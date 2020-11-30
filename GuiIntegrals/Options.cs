@@ -12,7 +12,6 @@ namespace GuiIntegrals
     {
         private static Dictionary<string, object> context = new Dictionary<string, object>();
         private static NReco.Linq.LambdaParser parser = new NReco.Linq.LambdaParser();
-        
         static Functions()
         {
             context["pi"] = Math.PI;

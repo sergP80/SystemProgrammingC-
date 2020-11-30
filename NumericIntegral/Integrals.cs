@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -7,13 +8,52 @@ using System.Threading.Tasks;
 
 namespace NumericIntegral
 {
-    public class IntegrateOptions
+    public class IntegrateOptions: INotifyPropertyChanged
     {
-        public double StartX { get; set; }
-        public double EndX { get; set; }
-        public int Steps { get; set; }
+        private double startX;
+        public double StartX
+        { 
+            get
+            {
+                return this.startX;
+            }
+            set
+            {
+                this.startX = value;
+                this.NotifyChanged("StartX");
+            }
+        }
+
+        private double endX;
+        public double EndX 
+        { 
+            get
+            {
+                return this.endX;
+            }
+            set
+            {
+                this.endX = value;
+                this.NotifyChanged("EndX");
+            }
+        }
+
+        private int steps;
+        public int Steps
+        { 
+            get
+            {
+                return this.steps;
+            }
+            set
+            {
+                this.steps = value;
+                this.NotifyChanged("Steps");
+            }
+        }
 
         private double tolerance = 1e-3;
+
         public double Tolerance
         {
             get
@@ -27,9 +67,23 @@ namespace NumericIntegral
                 {
                     throw new InvalidOperationException("Tolerance should be between 0 and 1");
                 }
+                NotifyChanged("Tolerance");
             }
         }
-        public Func<double, double> Function { get; set; }
+
+        private Func<double, double> function;
+        public Func<double, double> Function 
+        { 
+            get
+            {
+                return this.function;
+            }
+            set
+            {
+                this.function = value;
+                this.NotifyChanged("Function");
+            }
+        }
 
         public double Step
         {
@@ -41,6 +95,26 @@ namespace NumericIntegral
 
         public double CountedSteps { get; internal set; } = 0;
 
+        public bool IsValid
+        {
+            get
+            {
+                return this.StartX < this.EndX
+                       && this.Steps > 0
+                       && this.Function != null;
+            }
+        }
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void NotifyChanged(string propName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
+        }
+
+        public override string ToString()
+        {
+            return string.Format("Options[start X: {0}, end X: {1}, step count: {2}, step size: {3}, tol: {4}]", StartX, EndX, Steps, Step, Tolerance);
+        }
     }
 
     public delegate double IntegralMethod(IntegrateOptions options, Func<double, int, bool> cancelProgress);

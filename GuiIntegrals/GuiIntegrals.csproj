@@ -57,10 +57,19 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Options.cs" />
+    <Compile Include="Preferences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preferences.Designer.cs">
+      <DependentUpon>Preferences.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preferences.resx">
+      <DependentUpon>Preferences.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -70,8 +79,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\mainForm.datasource" />
+    <None Include="Properties\DataSources\NumericIntegral.IntegrateOptions.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -90,6 +102,27 @@
       <Project>{48d9323a-75d1-4117-a537-8844f1b59d7b}</Project>
       <Name>NumericIntegral</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Run_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_red_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SettingsOutline_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_grey_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StatusOK_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StatusNo_16x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
