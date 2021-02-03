@@ -57,6 +57,7 @@ namespace ParallelTask1
 
         public void Sort()
         {
+            //Selection sort
             for (var i = From; i <= To; ++i)
             {
                 var k = i;
