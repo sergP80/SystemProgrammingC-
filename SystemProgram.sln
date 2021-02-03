@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30621.155
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vector2DLib", "Vector2DLib\Vector2DLib.csproj", "{F251546F-7F06-4707-ABEB-ECFBD8DB652B}"
 EndProject
@@ -36,6 +36,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuiFuncCalc", "GuiFuncCalc\GuiFuncCalc.csproj", "{07EB5A2C-6AEC-4576-95E9-A0D55DDBDF8E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiIntegrals", "GuiIntegrals\GuiIntegrals.csproj", "{B1B8DA45-A4F7-469B-8D61-1F0C04FB2AC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelTask1", "ParallelTask1\ParallelTask1.csproj", "{5D5EE33E-0536-4D02-889E-E79BB08BF1AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,10 @@ Global
 		{B1B8DA45-A4F7-469B-8D61-1F0C04FB2AC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1B8DA45-A4F7-469B-8D61-1F0C04FB2AC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1B8DA45-A4F7-469B-8D61-1F0C04FB2AC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D5EE33E-0536-4D02-889E-E79BB08BF1AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D5EE33E-0536-4D02-889E-E79BB08BF1AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D5EE33E-0536-4D02-889E-E79BB08BF1AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D5EE33E-0536-4D02-889E-E79BB08BF1AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
