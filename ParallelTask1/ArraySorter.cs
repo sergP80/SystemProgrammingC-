@@ -10,25 +10,71 @@ namespace ParallelTask1
     public interface IWorker
     {
         void Start();
+        void StartAsync();
         void Stop();
-        bool isBusy();
+        bool IsBusy { get; set; }
     }
 
-    public class ArraySorter : IWorker
+    public interface ISorter
     {
-        public bool isBusy()
+        void Sort();
+    }
+
+    public class ArraySorter<T> : IWorker, ISorter where  T: IComparable<T>
+    {
+        private T[] array;
+
+        Task task;
+
+        public ArraySorter(T[] array)
         {
-            throw new NotImplementedException();
+            this.array = array;
         }
+
+        public int From { get; set; }
+
+        public int To { get; set; }
+
+        public bool IsBusy { get; set; }
 
         public void Start()
         {
-            throw new NotImplementedException();
+            Sort();
+        }
+
+        public void StartAsync()
+        {
+            this.task = Task.Factory.StartNew(Sort);
         }
 
         public void Stop()
         {
-            throw new NotImplementedException();
+            if (task.Status != TaskStatus.Running)
+            {
+                return;
+            }            
+        }
+
+        public void Sort()
+        {
+            for (var i = From; i <= To; ++i)
+            {
+                var k = i;
+                for (var j = i + 1; j <= To; ++j)
+                {
+                    if (array[i].CompareTo(array[j]) > 0)
+                    {
+                        k = j;
+                    }
+                }
+
+                if (k > i)
+                {
+                    var temp = array[k];
+                    array[k] = array[i];
+                    array[i] = temp;
+                }
+            }
         }
     }
 }
